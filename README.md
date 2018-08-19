@@ -22,11 +22,17 @@ There are a number of configurations should be updated before using:
 
 * `enableMail`: Whether the retrieved system information should be sent via
 e-mail. Set to `yes` to enable and `no` to disable.
+* `apiKey`: Mailgun account private key.
 * `domainName`: The active domain on your Mailgun account for sending e-mail.
 * `senderName`: The name of sender who the e-mail will be sent on behalf.
 * `senderEmail`: The e-mail address of sender who the e-mail will be sent on
 behalf.
 * `receiverEmail`: The e-mail address that the e-mail will be sent to.
+
+It is recommended to make the configuration file accessible only to the user
+who deploy Watcher.
+
+    chmod 600 watcher.config
 
 Before configuring Watcher to send e-mail, follow the instructions on Mailgun
 to setup the domain properly.
