@@ -105,6 +105,8 @@ mailSystemInfo() {
 
   (
     cat "${mailHeadTemplate}"
+    # Escape several HTML entities.
+    # Reference: https://stackoverflow.com/a/12873723
     sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g;' "${systemLog}"
     cat "${mailTailTemplate}"
   ) > "${mailFile}"
