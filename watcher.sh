@@ -90,6 +90,13 @@ getSystemInfo() {
     sysctl hw.sensors
     echo ''
 
+    # Authentication logs.
+    echo '##############################'
+    echo '# Authentication logs ########'
+    echo '##############################'
+    tail /var/log/authlog
+    echo ''
+
     # dmesg.
     echo '##############################'
     echo '# dmesg ######################'
