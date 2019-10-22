@@ -37,7 +37,7 @@ getSystemInfo() {
     echo '##############################'
     echo '# Operating system name ######'
     echo '##############################'
-    uname -a
+    uname -srvm
     echo ''
 
     # System hostname.
