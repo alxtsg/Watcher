@@ -33,6 +33,13 @@ fi
 # Collect system information.
 getSystemInfo() {
   (
+    # Operating system name.
+    echo '##############################'
+    echo '# Operating system name ######'
+    echo '##############################'
+    uname -a
+    echo ''
+
     # System hostname.
     echo '##############################'
     echo '# System hostname ############'
@@ -95,6 +102,13 @@ getSystemInfo() {
     echo '# Authentication logs ########'
     echo '##############################'
     tail /var/log/authlog
+    echo ''
+
+    # System messages.
+    echo '##############################'
+    echo '# System messages ############'
+    echo '##############################'
+    tail /var/log/messages
     echo ''
 
     # dmesg.
